@@ -1,0 +1,16 @@
+*{
+    font-size: 20px;
+  }
+.button{
+    font-size: 20px;
+    color: black;
+    background-color: brown;
+    border-radius: 20px ;
+    width: 23%;
+  }
+
+  
+
+  body{
+    background-color: darkblue;
+  }

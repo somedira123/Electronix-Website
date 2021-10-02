@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkblue;
+  }
+
+  button {
+    color: black;
+    background-color: brown;
+    /* font-size: 40px; */
+    border-radius: 20px;
+    width: 90%;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgb(219, 117, 117);
+  }
+
+  button:active{
+    background-color: #fff;
+  }
+
+  button:visited {
+    background-color: teal;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover{
+    background-color: rgb(219, 117, 117);
+  }
+
+  a:visited {
+    background-color: teal;
+  }
+
+  a:active{
+    background-color: #fff;
+  }
+
+  input {
+    /* font-size: 40px; */
+    border-radius: 20px;
+    border-color: brown;
+    width: 90%;
+  }
+
+  .mycard {
+    border-radius: 15px;
+    background-color: white;
+    margin-right: 50%;
+    padding: 10px 60px 20px 60px;
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
