@@ -4,14 +4,14 @@
 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: darkblue;
+    background-color: #A1D8F7;
   }
 
    button {
     font-size: 15px;
     font-weight: bold;
     color: black;
-    background-color: brown;
+    background-color: #FC1704;
     border-radius: 20px ;
     width: 6%;
     float: right;
@@ -33,7 +33,7 @@
     border-radius: 20px;
     width: 15%;
     color: black;
-    background-color: brown;
+    background-color: #FC1704;
     margin-top: 10px;
     margin-left: 221px;
     font-weight: bold;

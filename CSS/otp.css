@@ -4,7 +4,7 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: darkblue;
+    background-color: #A1D8F7;
   }
 
   .mycard {
@@ -24,7 +24,7 @@ transform: translate(-50%, -50%);
 button{
   font-size: 20px;
   color: black;
-  background-color: brown;
+  background-color: #FC1704;
   border-radius: 20px ;
   width: 30%;
 }
