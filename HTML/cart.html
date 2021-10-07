@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\Electronix-Website/CSS/cart.css">
+	<script src="\Electronix-Website/JS/cart.js" async></script>
+    <title>Document</title>
+</head>
+<body>
+	<section class="container content-section">
+		<div class="navbar">
+			<a href="mobile.html">Mobile</a>
+			<a href="laptop.html">Laptop</a>
+			<a href="tablet.html">Tablet</a>
+			<a class="active" href="">TV</a>
+			<div class="search-container">
+			  <form action="/action_page.php">
+				<input type="text" placeholder="Search" name="search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			</div>
+		</div>
+		<h1 class="section-header">My Cart</h1>
+		<div class="cart-row">
+			<span class="cart-product cart-header cart-column">PRODUCT</span>
+			<span class="cart-item-prize cart-header cart-column">ITEM PRIZE</span>
+			<span class="cart-quantity cart-header cart-column">QUANTITY</span>
+			<span class="cart-prize cart-header cart-column">PRIZE</span>=
+		</div>
+		<div class="cart-products">
+			<div class="cart-row">
+				<div class="cart-product cart-column">
+					<img class="cart-product-image" src="\Electronix-Website/Images/mobile/MI-redmi-note10promax.jpeg" width="100px" height="100px">
+					<span class="cart-product-title">Product 1</span>
+				</div>
+				<span class="cart-item-prize cart-column">$439.99</span>
+				<div class="cart-quantity cart-column">
+					<input class="cart-quantity-input" type="number" value="1">
+					<button class="btn btn-danger">REMOVE</button>
+				</div>
+				<span class="cart-prize cart-column">$439.99</span>
+			</div>
+			<div class="cart-row">
+				<div class="cart-product cart-column">
+					<img class="cart-product-image" src="\Electronix-Website/Images/mobile/Oppo-a53.jpeg" width="100px" height="100px">
+					<span class="cart-product-title">Product 2</span>
+				</div>
+				<span class="cart-item-prize cart-column">$399.99</span>
+				<div class="cart-quantity cart-column">
+					<input class="cart-quantity-input" type="number" value="1">
+					<button class="btn btn-danger">REMOVE</button>
+				</div>
+				<span class="cart-prize cart-column">$399.99</span>
+			</div>
+			<div class="cart-row">
+				<div class="cart-product cart-column">
+					<img class="cart-product-image" src="\Electronix-Website/Images/mobile/SM-F02.jpeg" width="100px" height="100px">
+					<span class="cart-product-title">Product 3</span>
+				</div>
+				<span class="cart-item-prize cart-column">$459.99</span>
+				<div class="cart-quantity cart-column">
+					<input class="cart-quantity-input" type="number" value="1">
+					<button class="btn btn-danger">REMOVE</button>
+				</div>
+				<span class="cart-prize cart-column">$459.99</span>
+			</div>
+			<div class="cart-row">
+				<div class="cart-product cart-column">
+					<img class="cart-product-image" src="\Electronix-Website/Images/mobile/OnePlus-6.jpg" width="100px" height="100px">
+					<span class="cart-product-title">Product 4</span>
+				</div>
+				<span class="cart-item-prize cart-column">$599.99</span>
+				<div class="cart-quantity cart-column">
+					<input class="cart-quantity-input" type="number" value="1">
+					<button class="btn btn-danger">REMOVE</button>
+				</div>
+				<span class="cart-prize cart-column">$599.99</span>
+			</div>
+		<div class="cart-total">
+			<strong class="cart-total-title">Total</strong>
+			<span class="cart-total-prize">$1899.96</span>
+		</div>
+		<button class="btn btn-primary btn-checkout" type="button">Proceed to checkout</button>
+	</section>
+</body>
+</html>
