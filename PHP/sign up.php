@@ -1,29 +1,78 @@
-<?php
-   $ShowAlert = false;
-   $ShowError = false;
- if($_SERVER["REQUEST_METHOD"] == "POST"){
-   include 'partials/_dbconnect.php';
-   $username = $_POST["username"];
-   $emailid = $_POST['emailid'];
-   $mobilenumber = $_POST['mobilenumber'];
-   $password = $_POST["password"];
-   $cpassword = $_POST["cpassword"];
-   $exists = false;
+    <?php
+      $ShowAlert = false;
+      $ShowError = false;
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+      include 'partials/_dbconnect.php';
+      $username = $_POST["username"];
+      $emailid = $_POST["emailid"];
+      $mobilenumber = $_POST["mobilenumber"];
+      $password = $_POST["password"];
+      $cpassword = $_POST["cpassword"];
+      //  $exists = false;
+      $existSql = "SELECT * FROM `users` WHERE username='$username';";
+      $result = mysqli_query($conn, $existSql);
+      
+      $numExistsRows = mysqli_num_rows($result);
 
-   if(($password == $cpassword) && $exists == false){
-     $sql = "INSERT INTO `users` (`username`, `emailid`, 
-     `mobilenumber`, `password`) VALUES ('$username', 
-     '$emailid', '$mobilenumber', '$password')";
-     $result = mysqli_query($conn, $sql);
+      //  if(empty($username))
+      //       {
+      //         echo 'Username required';
+      //         $ShowError = " All fields are required";
+      //       }
 
-     if($result){
-       $ShowAlert = true;
-     }
-   }
-   else{
-     $ShowError = "Passwords do not match";
-   }
-  }
+      if($numExistsRows > 0)
+      {
+        //  $exists = true;
+        $ShowError = "Username already taken";
+
+      }
+      else
+      {
+        //  $exists = false;
+
+      if(($password == $cpassword) && !(empty($username)) && !(empty($emailid))
+        && !(empty($mobilenumber)) && !(empty($password)) && !(empty($cpassword)) )
+      {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO `users` (`username`, `emailid`, 
+        `mobilenumber`, `password`) VALUES ('$username', 
+        '$emailid', '$mobilenumber', '$hash')";
+
+        
+        $result = mysqli_query($conn, $sql);
+
+        if($result)
+        {
+          $ShowAlert = true;
+        }
+      }
+      else
+      {
+        $ShowError = "Passwords do not match ";
+      }
+      if (!(empty($username)) && !(empty($emailid))
+      && !(empty($mobilenumber)) && !(empty($password)) && !(empty($cpassword))) {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO `users` (`username`, `emailid`, 
+        `mobilenumber`, `password`) VALUES ('$username', 
+        '$emailid', '$mobilenumber', '$hash')";
+
+        
+        $result = mysqli_query($conn, $sql);
+
+        if($result)
+        {
+          $ShowAlert = true;
+        }
+      }
+      else
+      {
+        $ShowError = "All fields are required ";
+      }
+      }
+      }
+
  ?>
 
 <!DOCTYPE html>
@@ -48,12 +97,12 @@
 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: darkblue;
+    background-color: #A1D8F7;
   }
 
   button {
     color: black;
-    background-color: brown;
+    background-color: #FC1704 ;
     /* font-size: 40px; */
     border-radius: 20px;
     width: 90%;
@@ -91,7 +140,7 @@
   input {
     /* font-size: 40px; */
     border-radius: 20px;
-    border-color: brown;
+    border-color: #FC1704;
     width: 90%;
   }
 
@@ -138,16 +187,16 @@ if($ShowError){
 
 
 <div class="mycard">
-      <form action="/Website/PHP/sign up.php" method="post">
+      <form action="/Electronix-Website/PHP/sign up.php" method="post">
       <h3>SIGN UP</h3>
       <label for="Username"> Enter account name</label>
       <div>
-        <input type="text" name="username" id="username" />
+        <input type="text" maxlength="10" name="username" id="username" />
       </div>
 
       <label for="Email id"> Enter Email address</label>
       <div>
-        <input type="email" name="emailid"  id="emailid" />
+        <input type="email" maxlength="10" name="emailid"  id="emailid" />
       </div>
 
       <label for="Mobile number">Mobile number</label>
@@ -157,17 +206,17 @@ if($ShowError){
       <option value="india" class="click">+91</option>
      </select> -->
 
-        <input type="phone" name="mobilenumber"  id="mobilenumber" />
+        <input type="phone" maxlength="10" name="mobilenumber"  id="mobilenumber" />
       </div>
 
       <label for="Password"> Password</label>
       <div>
-        <input type="password" name="password"  id="password" />
+        <input type="password"  maxlength="10"name="password"  id="password" />
       </div>
 
       <label for=" Confirm Password">Confirm Password</label>
       <div>
-        <input type="password" name="cpassword"  id="cpassword" />
+        <input type="password" maxlength="10" name="cpassword"  id="cpassword" />
       </div>
       <br />
 
@@ -176,8 +225,8 @@ if($ShowError){
     </form>
       <hr />
       <h5>Already have an account?</h5>
-      <a href="/Website/HTML/sign in.html">
-      <button class=signin>SIGN IN</button> 
+      <a href="/Electronix-Website/PHP/sign in.php">
+      <button>SIGN IN</button> 
     </a>
     </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
