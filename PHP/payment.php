@@ -1,4 +1,45 @@
-* {
+<?php
+session_start();
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true){
+  header("location: sign in.php");
+  exit;
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/Electronix-Website/CSS/payment.css">
+</head>
+
+<style>
+
+  *{
+    font-size: 20px;
+  }
+  .button{
+    font-size: 20px;
+    color: white;
+    background-color: darkblue;
+    border-radius: 20px ;
+    width: 23%;
+    margin: 10px;
+  }
+  font-size: 20px
+  {
+    color:black;
+  }
+  body{
+    background-color: #A1D8F7;
+  }
+  * {
   box-sizing: border-box;
 }
 
@@ -250,3 +291,65 @@ footer {
   padding: 20px 20px;
   text-align: center;
 }
+  </style>
+  <body>
+  <header class="main_header">
+        <div class="logo">
+            <a href=""><b>ELECTRONIX</b></a>
+            <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
+        </div>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search for products, brands and much more..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa fa-caret-down" aria-hidden="true"></i> MORE
+            </button>
+            <div class="dropdown-content">
+                <a href="#">My Order</a>
+                <a href="/Electronix-Website/PHP/settings.php">My Account</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+            </div>
+        </div>
+        <div class="signup-box">
+            <div class="signup">
+                <a href="/Electronix-Website/PHP/sign up.php">SIGNUP</a>
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <div class="cart-box">
+            <div class="cart">
+                <a href="/Electronix-Website/HTML/cart.html">CART</a>
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+    <h1 style="color: black;">Payment Policy</h1>
+
+    <label for="Payment" style="color: black;">Select your Payment Options</label>
+      <div>
+      <select name="mobile Number" id="Mobile number">
+      <option value="cod" class="click">Cash on delivery</option>
+      <option value="pt" class="click">PAYTM</option>
+      <option value="cd" class="click">Credit Card</option>
+      <option value="dd" class="click">Debit Card</option>
+      </select>
+  </div><br>
+
+
+   <a href="/Electronix-Website/PHP/card.php">
+     <input type="button" class="button" value="Add your cards"></a><br>
+
+   <img src="/Website/Images/cards.jfif" alt="" srcset=""><br><br>
+   <a href="/Electronix-Website/PHP/card.php">
+     <input type="button" class="button" value="Add your cards"></a><br>
+   <a href="">
+     <input type="button" class="button" value="Show my cards"></a>
+  
+</body>
+</html>

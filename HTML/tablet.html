@@ -6,22 +6,190 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/CSS/product_style.css">
+  <link rel="stylesheet" href="/Electronix-Website/CSS/product_style.css">
+
+  <style>
+    body{
+      background-color: #A1D8F7;
+    }
+    .card
+    {
+      background-color: white;
+    }
+    .container_brand
+    {
+      background-color: white;
+    }
+    header {
+  background: rgb(10, 10, 10);
+  display: flex;
+  color: rgb(255, 255, 255);
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgb(10, 4, 100);
+    
+  }
+  .navbar a.active {
+    background-color: rgb(8, 8, 8);
+    color: rgb(253, 251, 251);
+    border: 2px solid white;
+  }
+.main_header a {
+  float: right;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main_header .search-container {
+  float: right;
+}
+
+.main_header input[type=text] {
+  padding: 6px;
+  width: 500px;
+  font-size: 17px;
+  border: none;
+}
+
+.main_header .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ccc;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.main_header .search-container button:hover {
+  background: rgb(160, 159, 159);
+}
+
+.main_header .logo:hover {
+  cursor: pointer;
+}
+
+.logo {
+  margin-top: 4px;
+}
+
+.signup i {
+  margin-top: 15px;
+}
+
+.signup-box {
+  padding: 0 15px 0 15px;
+}
+
+.signup-box:hover {
+  background-color: rgb(126, 127, 133);
+  cursor: pointer;
+}
+
+.cart i {
+  margin-top: 15px;
+}
+
+.cart-box {
+  padding: 0 15px 0 15px;
+}
+
+.cart-box:hover {
+  background-color: rgb(126, 127, 133);
+  cursor: pointer;
+}
+
+.dropbtn {
+  background: rgb(0, 0, 0);
+  ;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 50px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: rgb(126, 127, 133);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: rgb(126, 127, 133);
+}
+
+  </style>
 </head>
 
 <body>
+  <header class="main_header">
+    <div class="logo">
+        <a href=""><b>ELECTRONIX</b></a>
+        <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
+    </div>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search for products" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div> 
+<div class="dropdown">
+        <button class="dropbtn">
+            <i class="fa fa-caret-down" aria-hidden="true"></i> MORE
+        </button>
+        <div class="dropdown-content">
+            <a href="#">My Order</a>
+            <a href="/Electronix-Website/PHP/settings.php">My Account</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+        </div>
+    </div>
+    <div class="signup-box">
+        <div class="signup">
+            <a href="/Electronix-Website/PHP/sign up.php">SIGNUP</a>
+            <i class="fa fa-user"></i>
+        </div>
+    </div>
+    <div class="cart-box">
+        <div class="cart">
+            <a href="/Electronix-Website/HTML/cart.html">CART</a>
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+</header>
 
   <div class="navbar">
     <a href="mobile.html">Mobile</a>
     <a href="laptop.html">Laptop</a>
     <a class="active" href="">Tablet</a>
     <a href="tv.html">TV</a>
-    <div class="search-container">
-      <form action="/action_page.php">
-        <input type="text" placeholder="Search" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
   </div>
 
   <div class="heading">
@@ -29,20 +197,20 @@
     <p>Shop latest Tablets at a reasonable price.</p>
     <h2>SHOP BY BRAND</h2>
   </div>
-  <div class="container_brand">
+  <div class="container_brand" style="background-color: white;">
     <div class="box">
       <a href="#samsung_heading">
-        <img src="/images/brand-logo/samsung.png" alt="" width="150" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/samsung.png" alt="" width="150" height="120">
       </a>
     </div>
     <div class="box">
       <a href="#lenovo_heading">
-        <img src="/images/brand-logo/lenovo.png" alt="" width="150" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/lenovo.png" alt="" width="150" height="120">
       </a>
     </div>
     <div class="box">
       <a href="#apple_heading">
-        <img src="/images/brand-logo/apple.png" alt="" width="160" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/apple.png" alt="" width="160" height="120">
       </a>
     </div>
   </div>
@@ -52,7 +220,7 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/tablet/SAMSUNG-Galaxy-TabS7.jpeg" alt="SAMSUNG-Galaxy-TabS7" width="100%" height="250px">
+      <img src="/Electronix-Website/Images/tablet/SAMSUNG-Galaxy-TabS7.jpeg" alt="SAMSUNG-Galaxy-TabS7" width="100%" height="250px">
       <h2>SAMSUNG Galaxy Tab<br>S7+</h2>
       <p><b>(6 GB RAM, 128 GB ROM, 12.4 inch, Mystic Black)</b></p>
       <p class="price"><b>₹71,999</b></p>
@@ -60,7 +228,7 @@
       <p><button>Add to Cart</button></p>
     </div>
     <div class="card">
-      <img src="/images/tablet/SAMSUNG-Galaxy-TabS6.jpeg" alt="SAMSUNG-Galaxy-TabS6" width="100%" height="250px">
+      <img src="/Electronix-Website/Images/tablet/SAMSUNG-Galaxy-TabS6.jpeg" alt="SAMSUNG-Galaxy-TabS6" width="100%" height="250px">
       <h2>SAMSUNG Galaxy Tab<br>S6 Lite</h2>
       <p><b>(4 GB RAM, 64 GB ROM, 10.4 inch, Angora Blue)</b></p>
       <p class="price"><b>₹27,999</b></p>
@@ -68,7 +236,7 @@
       <p><button>Add to Cart</button></p>
     </div>
     <div class="card">
-      <img src="/images/tablet/SAMSUNG-Galaxy-TabA7.jpeg" alt="SAMSUNG-Galaxy-TabA7" width="100%" height="250px">
+      <img src="/Electronix-Website/Images/tablet/SAMSUNG-Galaxy-TabA7.jpeg" alt="SAMSUNG-Galaxy-TabA7" width="100%" height="250px">
       <h2>SAMSUNG Galaxy Tab<br>A7</h2>
       <p><b>(3 GB RAM, 64 GB ROM, 10.4 inch, Dark Grey)</b></p>
       <p class="price"><b>₹18,999</b></p>
@@ -82,7 +250,7 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/tablet/Lenovo-Tab-P11-Pro.jpeg" alt="Lenovo-Tab-P11-Pro" width="100%" height="255px">
+      <img src="/Electronix-Website/Images/tablet/Lenovo-Tab-P11-Pro.jpeg" alt="Lenovo-Tab-P11-Pro" width="100%" height="255px">
       <h2>Lenovo Tab<br>P11 Pro</h2>
       <p><b>(6 GB RAM, 128 GB ROM, 11.5 inch, Slate Grey)</b></p>
       <p class="price"><b>₹44,990</b></p>
@@ -90,7 +258,7 @@
       <p><button>Add to Cart</button></p>
     </div>
     <div class="card">
-      <img src="/images/tablet/Lenovo-M10-FHD-Plus.jpeg" alt="Lenovo-M10-FHD-Plus" width="100%" height="255px">
+      <img src="/Electronix-Website/Images/tablet/Lenovo-M10-FHD-Plus.jpeg" alt="Lenovo-M10-FHD-Plus" width="100%" height="255px">
       <h2>Lenovo Tab M10 FHD Plus<br>with Active Pen</h2>
       <p><b>(4 GB RAM, 128 GB ROM, 10.3 inches, Platinum Grey)</b></p>
       <p class="price"><b>₹23,358</b></p>
@@ -98,7 +266,7 @@
       <p><button>Add to Cart</button></p>
     </div>
     <div class="card">
-      <img src="/images/tablet/Lenovo-Tab-M10.jpeg" alt="Lenovo-Tab-M10" width="100%" height="255px">
+      <img src="/Electronix-Website/Images/tablet/Lenovo-Tab-M10.jpeg" alt="Lenovo-Tab-M10" width="100%" height="255px">
       <h2>Lenovo Tab<br>M10 (HD)</h2>
       <p><b>(2 GB RAM, 32 GB ROM, 10.1 inch, Slate Black)</b></p>
       <p class="price"><b>₹10,493</b></p>
@@ -112,7 +280,7 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/tablet/APPLE-iPad-Pro.jpeg" alt="APPLE-iPad-Pro" width="100%" height="455px">
+      <img src="/Electronix-Website/Images/tablet/APPLE-iPad-Pro.jpeg" alt="APPLE-iPad-Pro" width="100%" height="455px">
       <h2>APPLE iPad Pro<br>2021 (5th Generation)</h2>
       <p><b>(Silver, 8 GB RAM, 128 GB ROM, 12.9 inches)</b></p>
       <p class="price"><b>₹99,900</b></p>
@@ -120,7 +288,7 @@
       <p><button>Add to Cart</button></p>
     </div>
     <div class="card">
-      <img src="/images/tablet/APPLE-iPad-Air.jpeg" alt="APPLE-iPad-Air" width="100%" height="470px">
+      <img src="/Electronix-Website/Images/tablet/APPLE-iPad-Air.jpeg" alt="APPLE-iPad-Air" width="100%" height="470px">
       <h2>APPLE iPad Air<br>(4th Generation)</h2>
       <p><b>(Sky Blue, 64 GB ROM, 10.9 inch)</b></p>
       <p class="price"><b>₹50,900</b></p>
@@ -128,7 +296,7 @@
       <p><button>Add to Cart</button></p>
     </div>
     <div class="card">
-      <img src="/images/tablet/APPLE-ipad-Mini.jpeg" alt="APPLE-iPad-Mini" width="100%" height="470px">
+      <img src="/Electronix-Website/Images/tablet/APPLE-ipad-Mini.jpeg" alt="APPLE-iPad-Mini" width="100%" height="470px">
       <h2>APPLE iPad Mini<br>(2019)</h2>
       <p><b>(Silver, 64 GB ROM, 7.9 inch)</b></p>
       <p class="price"><b>₹34,893</b></p>

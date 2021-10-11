@@ -6,22 +6,196 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/CSS/product_style.css">
+  <link rel="stylesheet" href="/Electronix-Website/CSS/product_style.css">
+
+  <style>
+    body{
+      background-color: #A1D8F7;
+    }
+    .container_brand
+    {
+      background-color: white;
+    }
+    .card
+    {
+      background-color: white;
+    }
+    header {
+  background: rgb(10, 10, 10);
+  display: flex;
+  color: rgb(255, 255, 255);
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgb(10, 4, 100);
+    
+  }
+  .navbar a.active {
+    background-color: rgb(8, 8, 8);
+    color: rgb(253, 251, 251);
+    border: 2px solid white;
+  }
+.main_header a {
+  float: right;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main_header .search-container {
+  float: right;
+}
+
+.main_header input[type=text] {
+  padding: 6px;
+  width: 500px;
+  font-size: 17px;
+  border: none;
+}
+
+.main_header .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ccc;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.main_header .search-container button:hover {
+  background: rgb(160, 159, 159);
+}
+
+.main_header .logo:hover {
+  cursor: pointer;
+}
+
+.logo {
+  margin-top: 4px;
+}
+
+.signup i {
+  margin-top: 15px;
+}
+
+.signup-box {
+  padding: 0 15px 0 15px;
+}
+
+.signup-box:hover {
+  background-color: rgb(126, 127, 133);
+  cursor: pointer;
+}
+
+.cart i {
+  margin-top: 15px;
+}
+
+.cart-box {
+  padding: 0 15px 0 15px;
+}
+
+.cart-box:hover {
+  background-color: rgb(126, 127, 133);
+  cursor: pointer;
+}
+
+.dropbtn {
+  background: rgb(0, 0, 0);
+  ;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 50px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: rgb(126, 127, 133);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: rgb(126, 127, 133);
+}
+
+  </style>
 </head>
 
 <body>
+  <header class="main_header">
+    <div class="logo">
+        <a href=""><b>ELECTRONIX</b></a>
+        <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
+    </div>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search for products" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div> 
+<div class="dropdown">
+        <button class="dropbtn">
+            <i class="fa fa-caret-down" aria-hidden="true"></i> MORE
+        </button>
+        <div class="dropdown-content">
+            <a href="#">My Order</a>
+            <a href="/Electronix-Website/PHP/settings.php">My Account</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+        </div>
+    </div>
+    <div class="signup-box">
+        <div class="signup">
+            <a href="/Electronix-Website/PHP/sign up.php">SIGNUP</a>
+            <i class="fa fa-user"></i>
+        </div>
+    </div>
+    <div class="cart-box">
+        <div class="cart">
+            <a href="/Electronix-Website/HTML/cart.html">CART</a>
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+</header>
 
   <div class="navbar">
     <a class="active" href="">Mobile</a>
     <a href="laptop.html">Laptop</a>
     <a href="tablet.html">Tablet</a>
     <a href="tv.html">TV</a>
-    <div class="search-container">
+    <!-- <div class="search-container">
       <form action="/action_page.php">
         <input type="text" placeholder="Search" name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
-    </div>
+    </div> -->
   </div>
 
   <div class="heading">
@@ -33,32 +207,32 @@
   <div class="container_brand">
     <div class="box">
       <a href="#apple_heading">
-        <img src="/images/brand-logo/apple.png" alt="" width="150" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/apple.png" alt="" width="150" height="120">
       </a>
     </div>
     <div class="box">
       <a href="#samsung_heading">
-        <img src="/images/brand-logo/samsung.png" alt="" width="150" height="110">
+        <img src="/Electronix-Website/Images/brand-logo/samsung.png" alt="" width="150" height="110">
       </a>
     </div>
     <div class="box">
       <a href="#mi_heading">
-        <img src="/images/brand-logo/mi.png" alt="" width="160" height="110">
+        <img src="/Electronix-Website/Images/brand-logo/mi.png" alt="" width="160" height="110">
       </a>
     </div>
     <div class="box">
       <a href="#oppo_heading">
-        <img src="/images/brand-logo/oppo.png" alt="" width="150" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/oppo.png" alt="" width="150" height="120">
       </a>
     </div>
     <div class="box">
       <a href="#realme_heading">
-        <img src="/images/brand-logo/realme.png" alt="" width="150" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/realme.png" alt="" width="150" height="120">
       </a>
     </div>
     <div class="box">
       <a href="#oneplus_heading">
-        <img src="/images/brand-logo/oneplus.png" alt="" width="150" height="120">
+        <img src="/Electronix-Website/Images/brand-logo/oneplus.png" alt="" width="150" height="120">
       </a>
     </div>
   </div>
@@ -68,28 +242,34 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/mobile/iPhone12promax.jpeg" alt="iPhone 12" width="100%" height="455px">
+      <img src="/Electronix-Website/Images/mobile/iPhone12promax.jpeg" alt="iPhone 12" width="100%" height="455px">
       <h2>APPLE iPhone <br> 12 PRO MAX</h2>
       <p><b>(Pacific Blue, 6 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹1,25,900</b></p>
       <p> <del>₹1,29,900</del> &nbsp <b>3% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p><a href="/Electronix-Website/HTML/cart.html"><button>Add to Cart</button></a></p>
     </div>
     <div class="card">
-      <img src="/images/mobile/iPhone11.jpeg" alt="iPhone 11" width="100%" height="470px">
+      <img src="/Electronix-Website/Images//mobile/iPhone11.jpeg" alt="iPhone 11" width="100%" height="470px">
       <h1>APPLE iPhone 11</h1>
       <p><b>(White, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹51,999</b></p>
       <p> <del>₹54,900</del> &nbsp <b>5% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/iPhoneSE.jpeg" alt="iPhone SE" width="100%" height="470px">
+      <img src="/Electronix-Website/Images/mobile/iPhoneSE.jpeg" alt="iPhone SE" width="100%" height="470px">
       <h1>APPLE iPhone SE</h1>
       <p><b>(Black, 3 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹34,999</b></p>
       <p> <del>₹44,999</del> &nbsp <b>22% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
   </div>
 
@@ -98,28 +278,37 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/mobile/SM-A31.jpeg" alt="iPhone 12" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/SM-A31.jpeg" alt="iPhone 12" width="100%" height="450px">
       <h1>SAMSUNG Galaxy A31</h1>
       <p><b>(Prism Crush Blue, 6 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹16,999</b></p>
       <p><del>₹23,999</del> &nbsp <b>29% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/SM-F22.jpeg" alt="iPhone SE" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/SM-F22.jpeg" alt="iPhone SE" width="100%" height="450px">
       <h1>SAMSUNG Galaxy F22</h1>
       <p><b>(Denim Blue, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹12,999</b></p>
       <p> <del>₹14,999</del> &nbsp <b>13% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/SM-F02.jpeg" alt="iPhone 11" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/SM-F02.jpeg" alt="iPhone 11" width="100%" height="450px">
       <h1>SAMSUNG Galaxy F02s</h1>
       <p><b>(Diamond Blue, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹10,499</b></p>
       <p> <del>₹11,499</del> &nbsp <b>8% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
   </div>
 
@@ -128,28 +317,37 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/mobile/MI-redmi-note10promax.jpeg" alt="MI-redmi-note10promax" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/MI-redmi-note10promax.jpeg" alt="MI-redmi-note10promax" width="100%" height="450px">
       <h3>REDMI Note 10 <br> Pro Max</h3>
       <p><b>(Dark Night, 6 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹21,147</b></p>
       <p><del>₹22,299</del> &nbsp <b>5% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/MI-redmi-note-9.jpeg" alt="MI-redmi-note-9" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/MI-redmi-note-9.jpeg" alt="MI-redmi-note-9" width="100%" height="450px">
       <h1>REDMI Note 9</h1>
       <p><b>(Shadow Black, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹11,999</b></p>
       <p> <del>₹14,999</del> &nbsp <b>20% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/MI-redmi-9.jpeg" alt="MI-redmi-9" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/MI-redmi-9.jpeg" alt="MI-redmi-9" width="100%" height="450px">
       <h1>Redmi 9</h1>
       <p><b>(Sporty Orange, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹9,821</b></p>
       <p> <del>₹10,760</del> &nbsp <b>8% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
   </div>
 
@@ -158,28 +356,37 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/mobile/Oppo-f19s.jpeg" alt="Oppo-f19s" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/Oppo-f19s.jpeg" alt="Oppo-f19s" width="100%" height="450px">
       <h1>OPPO F19s</h1>
       <p><b>(Glowing Gold, 6 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹19,990</b></p>
       <p><del>₹22,990</del> &nbsp <b>13% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/Oppo-a53.jpeg" alt="Oppo-a53" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/Oppo-a53.jpeg" alt="Oppo-a53" width="100%" height="450px">
       <h1>OPPO A53</h1>
       <p><b>(Moonlight Black, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹11,990</b></p>
       <p> <del>₹15,990</del> &nbsp <b>25% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/Oppo-a12.jpeg" alt="Oppo-a12" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/Oppo-a12.jpeg" alt="Oppo-a12" width="100%" height="450px">
       <h1>OPPO A12</h1>
       <p><b>(Deep Blue, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹10,490</b></p>
       <p> <del>₹11,990</del> &nbsp <b>12% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
   </div>
 
@@ -188,28 +395,37 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/mobile/realme-8i.jpeg" alt="realme-8i" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/realme-8i.jpeg" alt="realme-8i" width="100%" height="450px">
       <h1>realme 8i</h1>
       <p><b>(Space Purple, 6 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹14,999</b></p>
       <p><del>₹17,999</del> &nbsp <b>16% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/realme-c25y.jpeg" alt="realme-c25y" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/realme-c25y.jpeg" alt="realme-c25y" width="100%" height="450px">
       <h1>realme C25Y</h1>
       <p><b>(Glacier Blue, 4 GB RAM, 128 GB)</b></p>
       <p class="price"><b>₹11,999</b></p>
       <p><del>₹13,999</del> &nbsp <b>14% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/realme-c21.jpeg" alt="realme-c21" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/realme-c21.jpeg" alt="realme-c21" width="100%" height="450px">
       <h1>realme C21</h1>
       <p><b>(Cross Black, 4 GB RAM, 64 GB)</b></p>
       <p class="price"><b>₹9,999</b></p>
       <p> <del>₹10,999</del> &nbsp <b>9% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
   </div>
 
@@ -218,28 +434,37 @@
   </div>
   <div class="container_products">
     <div class="card">
-      <img src="/images/mobile/OnePlus-9.jpg" alt="OnePlus-9" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/OnePlus-9.jpg" alt="OnePlus-9" width="100%" height="450px">
       <h1>OnePlus 9</h1>
       <p><b>(Arctic Sky, 8 GB RAM, 128GB)</b></p>
       <p class="price"><b>₹42,249</b></p>
       <p><del>₹49,999</del> &nbsp <b>16% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/OnePlus-7Tpro.jpg" alt="OnePlus-7Tpro" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/OnePlus-7Tpro.jpg" alt="OnePlus-7Tpro" width="100%" height="450px">
       <h1>OnePlus 7T Pro</h1>
       <p><b>(Haze Blue, 8 GB RAM, 256GB)</b></p>
       <p class="price"><b>₹36,999</b></p>
       <p> <del>₹58,999</del> &nbsp <b>37% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
     <div class="card">
-      <img src="/images/mobile/OnePlus-6.jpg" alt="OnePlus-6" width="100%" height="450px">
+      <img src="/Electronix-Website/Images/mobile/OnePlus-6.jpg" alt="OnePlus-6" width="100%" height="450px">
       <h1>OnePlus 6</h1>
       <p><b>(Mirror Black, 6 GB RAM, 64GB)</b></p>
       <p class="price"><b>₹17,999</b></p>
       <p> <del>₹39,999</del> &nbsp <b>55% OFF</b></p>
-      <p><button>Add to Cart</button></p>
+      <p>
+        <a href="/Electronix-Website/HTML/cart.html">
+          <button>Add to Cart</button></p>
+        </a>
     </div>
   </div>
 </body>

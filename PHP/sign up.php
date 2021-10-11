@@ -10,7 +10,7 @@
       $password = $_POST["password"];
       $cpassword = $_POST["cpassword"];
       //  $exists = false;
-      $existSql = "SELECT * FROM `users` WHERE username='$username';";
+      $existSql = "SELECT * FROM `users` `username`='$username', `emailid`='$emailid', `mobilenumber`='$mobilenumber'";
       $result = mysqli_query($conn, $existSql);
       
       $numExistsRows = mysqli_num_rows($result);
@@ -101,16 +101,17 @@
   }
 
   button {
-    color: black;
-    background-color: #FC1704 ;
+    color: white;
+    background-color: darkblue ;
     /* font-size: 40px; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     width: 90%;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: rgb(219, 117, 117);
+    background-color: lightblue;
+    color: black;
   }
 
   button:active{
@@ -139,8 +140,8 @@
 
   input {
     /* font-size: 40px; */
-    border-radius: 20px;
-    border-color: #FC1704;
+    /* border-radius: 20px; */
+    border-color: darkblue;
     width: 90%;
   }
 
@@ -167,7 +168,7 @@
 
 <body>
 
-<?php require 'partials/_nav.php' ?>
+
 
 <?php
 if($ShowAlert){

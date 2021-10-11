@@ -1,15 +1,131 @@
 * {
     box-sizing: border-box;
+    background-color: #A1D8F7;
   }
 
   body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #A1D8F7;
   }
-
-  .navbar {
+  
+  header {
+    background: rgb(0, 0, 0);
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .main_header a {
+    float: right;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .main_header .search-container {
+    float: right;
+  }
+  
+  .main_header input[type=text] {
+    padding: 6px;
+    width: 500px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .main_header .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: #ccc;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main_header .search-container button:hover {
+    background: rgb(160, 159, 159);
+  }
+  
+  .main_header .logo:hover {
+    cursor: pointer;
+  }
+  
+  .logo {
+    margin-top: 4px;
+  }
+  
+  .signup i {
+    margin-top: 15px;
+  }
+  
+  .signup-box {
+    padding: 0 15px 0 15px;
+  }
+  
+  .signup-box:hover {
+    background-color: rgb(126, 127, 133);
+    cursor: pointer;
+  }
+  
+  .cart i {
+    margin-top: 15px;
+  }
+  
+  .cart-box {
+    padding: 0 15px 0 15px;
+  }
+  
+  .cart-box:hover {
+    background-color: rgb(126, 127, 133);
+    cursor: pointer;
+  }
+  
+  .dropbtn {
+    background: rgb(0, 0, 0);
+    ;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 50px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: rgb(126, 127, 133);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: rgb(126, 127, 133);
+  }
+ .navbar {
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 59, 59);
   }
 
   .navbar a {
@@ -28,8 +144,8 @@
   }
 
   .navbar a.active {
-    background-color: rgb(223, 223, 223);
-    color: rgb(0, 0, 0);
+    background-color: rgb(8, 8, 8);
+    color: rgb(253, 251, 251);
   }
 
   .navbar .search-container {
@@ -56,7 +172,7 @@
 
   .navbar .search-container button:hover {
     background: #ccc;
-  }
+  } 
 
   .heading h1 {
     text-align: center;
@@ -79,6 +195,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    background-color: white;
   }
 
 
@@ -98,6 +215,7 @@
   }
 
   .card {
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
@@ -125,7 +243,121 @@
   .card button:hover {
     opacity: 0.7;
   }
-
+  header {
+    background: rgb(0, 0, 0);
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .main_header a {
+    float: right;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .main_header .search-container {
+    float: right;
+  }
+  
+  .main_header input[type=text] {
+    padding: 6px;
+    width: 500px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .main_header .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: #ccc;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main_header .search-container button:hover {
+    background: rgb(160, 159, 159);
+  }
+  
+  .main_header .logo:hover {
+    cursor: pointer;
+  }
+  
+  .logo {
+    margin-top: 4px;
+  }
+  
+  .signup i {
+    margin-top: 15px;
+  }
+  
+  .signup-box {
+    padding: 0 15px 0 15px;
+  }
+  
+  .signup-box:hover {
+    background-color: rgb(126, 127, 133);
+    cursor: pointer;
+  }
+  
+  .cart i {
+    margin-top: 15px;
+  }
+  
+  .cart-box {
+    padding: 0 15px 0 15px;
+  }
+  
+  .cart-box:hover {
+    background-color: rgb(126, 127, 133);
+    cursor: pointer;
+  }
+  
+  .dropbtn {
+    background: rgb(0, 0, 0);
+    ;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 50px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: rgb(126, 127, 133);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: rgb(126, 127, 133);
+  }
+  
 
 
   
