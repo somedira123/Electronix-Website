@@ -10,27 +10,19 @@
       $password = $_POST["password"];
       $cpassword = $_POST["cpassword"];
       //  $exists = false;
-      $existSql = "SELECT * FROM `users` `username`='$username', `emailid`='$emailid', `mobilenumber`='$mobilenumber'";
+      $existSql = "SELECT * FROM `users` WHERE username ='$username'";
       $result = mysqli_query($conn, $existSql);
       
       $numExistsRows = mysqli_num_rows($result);
 
-      //  if(empty($username))
-      //       {
-      //         echo 'Username required';
-      //         $ShowError = " All fields are required";
-      //       }
 
       if($numExistsRows > 0)
       {
-        //  $exists = true;
         $ShowError = "Username already taken";
 
       }
       else
       {
-        //  $exists = false;
-
       if(($password == $cpassword) && !(empty($username)) && !(empty($emailid))
         && !(empty($mobilenumber)) && !(empty($password)) && !(empty($cpassword)) )
       {
@@ -83,28 +75,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIGN UP</title>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
 
 
   <style>
     * {
     box-sizing: border-box;
-    font-size: px;
   }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #A1D8F7;
   }
 
   button {
     color: white;
-    background-color: darkblue ;
-    /* font-size: 40px; */
-    /* border-radius: 20px; */
+    background-color: darkblue ;   
     width: 90%;
     cursor: pointer;
   }
@@ -139,8 +127,6 @@
   }
 
   input {
-    /* font-size: 40px; */
-    /* border-radius: 20px; */
     border-color: darkblue;
     width: 90%;
   }
@@ -155,12 +141,38 @@
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
   }
 
   h1 {
     text-align: center;
   }
+  .logo 
+{
+  text-align:center;
+  transform: translate(0%, 142%);
+
+  /* margin: 10px; */
+}
+
+img a 
+{
+  font-size:35px;
+  color:black;
+  margin-bottom:15px;
+  margin-top:15px;
+}
+}
+img 
+{
+  margin-bottom:15px;
+  margin-top:15px;
+}
+.alert
+{
+  transform: translate(0%, -78%);
+}
+  
    </style>
 
   
@@ -168,8 +180,11 @@
 
 <body>
 
-
-
+<div class="logo">
+  <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
+        <a href="/Electronix-Website/HTML/homepage.html">ELECTRONIX</a>
+    </div>
+    
 <?php
 if($ShowAlert){
  echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">

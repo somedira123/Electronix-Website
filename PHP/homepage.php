@@ -93,7 +93,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true){
             </div>
         </div>
     </header>
-    <?php require 'partials/_nav.php' ?>
+    
    
     Welcome - <?php echo $_SESSION['username'] ?>
     

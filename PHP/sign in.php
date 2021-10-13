@@ -8,7 +8,7 @@
    $emailid = $_POST["emailid"];
   //  $mobilenumber = $_POST["mobilenumber"];
 
-     $sql = "SELECT * from `users` WHERE `username`='$username'";
+     $sql = "Select * from users where username='$username'";
      $result = mysqli_query($conn, $sql);
      $num = mysqli_num_rows($result);
 
@@ -24,7 +24,7 @@
            $_SESSION['username'] = $username;
            $_SESSION['emailid'] = $emailid;
            $_SESSION['mobilenumber'] = $mobilenumber;
-           header("location: welcome.php");
+           header("location: homepage.php");
          }
          else{
           $ShowError = "Invalid Credentials";
@@ -57,7 +57,6 @@
   <style>
     * {
     box-sizing: border-box;
-    font-size: px;
   }
 
   body {
@@ -68,9 +67,6 @@
   button {
     color: white;
     background-color: darkblue;
-    /* font-size: 40px; */
-    /* border-radius: 20px; */
-    /* margin:10px 0px 0px 0px; */
     width: 90%;
     cursor: pointer;
   }
@@ -105,8 +101,6 @@
   }
 
   input {
-    /* font-size: 40px; */
-    /* border-radius: 20px; */
     border-color: darkblue;
     width: 90%;
   }
@@ -121,7 +115,7 @@
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -43%);
   }
 
   h1 {
@@ -379,6 +373,31 @@ footer {
   padding: 20px 20px;
   text-align: center;
 }
+.logo 
+{
+  text-align:center;
+  transform: translate(0%, 184%);
+
+  /* margin: 10px; */
+}
+
+img a 
+{
+  font-size:35px;
+  color:black;
+  margin-bottom:15px;
+  margin-top:15px;
+}
+}
+img 
+{
+  margin-bottom:15px;
+  margin-top:15px;
+}
+.alert
+{
+  transform: translate(0%, -84%);
+}
    </style>
 
   
@@ -386,70 +405,11 @@ footer {
 
 <body>
 
-<header class="main_header">
-        <div class="logo">
-            <a href=""><b>ELECTRONIX</b></a>
-            <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
-        </div>
-        <!-- <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search for products, brands and much more..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div> -->
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa fa-caret-down" aria-hidden="true"></i> MORE
-            </button>
-            <div class="dropdown-content">
-                <a href="#">My Order</a>
-                <a href="/Electronix-Website/PHP/settings.php">My Account</a>
-                <a href="#">Contact Us</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
-            </div>
-        </div>
-        <div class="signup-box">
-            <div class="signup">
-                <a href="/Electronix-Website/PHP/sign up.php">SIGNUP</a>
-                <i class="fa fa-user"></i>
-            </div>
-        </div>
-        <div class="cart-box">
-            <div class="cart">
-                <a href="/Electronix-Website/HTML/cart.html">CART</a>
-                <i class="fa fa-shopping-cart"></i>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark bg-black ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Settings</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body bg-dark">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/Electronix-Website/PHP/sign out.php">Sign Out</a>
-          </li>
-          </li>
-        </ul>
-       
-          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-          <a href="/Electronix-Website/PHP/sign out.php">
-          <button class="btn btn-outline-success" type="submit">Sign Out</button>
-      </a>
-
-      </div>
+<div class="logo">
+  <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
+        <a href="/Electronix-Website/HTML/homepage.html">ELECTRONIX</a>
     </div>
-  </div>
-</nav>
-    </header>
+
 
 <?php
 if($login){

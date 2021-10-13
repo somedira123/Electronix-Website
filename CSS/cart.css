@@ -262,29 +262,54 @@ header {
     padding: 0.3em;
     cursor: pointer;
 }
+a{
+  text-decoration: none;
+}
 
 .btn-primary {
-    color: white;
+    /* color: white;
     background-color: #56CCF2;
     border: none;
     border-radius: 0.5em;
-    font-weight: bold;
+    font-weight: bold; */
+
+      border: 2px solid black;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: darkblue;
+        text-align: center;
+        cursor: pointer;
+        width: 20%;
+        font-size: 18px;
+    
 }
 
+
 .btn-primary:hover {
-    background-color: #2D9CD8;
+    background-color: lightblue;
+    color: black;
 }
 
 .btn-danger {
-    color: white;
+    /* color: white;
     background-color:#EB5757;
     border: none;
     border-radius: 0.3em;
-    font-weight: bold;
+    font-weight: bold; */
+    border: 2px solid black;
+        outline: 0;
+        padding: 5px;
+        color: white;
+        background-color: red;
+        text-align: center;
+        cursor: pointer;
+        width: 30%;
+        font-size: 15px;
 }
 
 .btn-danger:hover {
-    color: #CC4C4C;
+    color: white;
 }
 
 .cart-quantity-input {

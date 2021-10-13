@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/Electronix-Website/CSS/cart.css">
 	<script src="/Electronix-Website/JS/cart.js" async></script>
@@ -14,21 +13,22 @@
     * {
     box-sizing: border-box;
     /* font-family: Raleway; */
-    color: black;
     font-weight: bold;
-}
-
-.cart-column {
-  font-weight: bolder;
-  font-size: 25px;
+  }
+  
+  .cart-column {
+    font-weight: bolder;
+    font-size: 25px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid black;
     margin-right: 1.5em;
     padding-bottom: 10px;
     margin-top: 10px;
-}
-body{
+    color:black;
+  }
+  body{
+  color: black;
   background-color: #A1D8F7;
   
 }
@@ -71,6 +71,7 @@ body{
   margin-right: 16px;
   background: #ccc;
   font-size: 17px;
+  
   border: none;
   cursor: pointer;
 }
@@ -156,7 +157,7 @@ body{
 <body>
 	<header class="main_header">
         <div class="logo">
-            <a href=""><b>ELECTRONIX</b></a>
+            <a href="/Electronix-Website/HTML/homepage.html"><b>ELECTRONIX</b></a>
             <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
         </div>
     
@@ -167,7 +168,7 @@ body{
             <div class="dropdown-content">
                 <a href="#">My Order</a>
                 <a href="/Electronix-Website/PHP/settings.php">My Account</a>
-                <a href="#">Contact Us</a>
+                <a href="FAQ.html">FAQ</a>
                 <a href="#">About Us</a>
                 <a href="#">Services</a>
             </div>
@@ -238,7 +239,7 @@ body{
 				<span class="cart-item-prize cart-column">$459.99</span>
 				<div class="cart-quantity cart-column">
 					<input class="cart-quantity-input" type="number" value="1">
-					<button class="btn btn-danger">REMOVE</button>
+					<button class="btn btn-danger btnremove">REMOVE</button>
 				</div>
 				<span class="cart-prize cart-column">$459.99</span>
 			</div>
@@ -259,7 +260,7 @@ body{
 			<span class="cart-total-prize">$1899.96</span>
 		</div>
 		<a href="/Electronix-Website/PHP/payment.php">
-      <button class="btn btn-primary btn-checkout" type="button">Proceed to checkout</button>
+      <button class="btn btn-primary btn-checkout btnclass" type="button">Proceed to checkout</button>
     </a>
 	</section>
 </body>

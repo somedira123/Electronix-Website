@@ -16,7 +16,6 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/Electronix-Website/CSS/payment.css">
 </head>
 
 <style>
@@ -24,13 +23,23 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true){
   *{
     font-size: 20px;
   }
-  .button{
-    font-size: 20px;
+  .btndone{
+    border:2px solid black;
+    outline: 0;
     color: white;
-    background-color: darkblue;
-    border-radius: 20px ;
+    background-color: rgb(15, 3, 51);
+    text-align: center;
+    cursor: pointer;
     width: 23%;
-    margin: 10px;
+    font-size: 18px;
+    margin:2px;
+    padding:5px;
+  }
+  .btndone:hover
+  {
+    border:2px solid black;
+    background-color:lightblue;
+    color:black;
   }
   font-size: 20px
   {
@@ -295,7 +304,7 @@ footer {
   <body>
   <header class="main_header">
         <div class="logo">
-            <a href=""><b>ELECTRONIX</b></a>
+            <a href="/Electronix-Website/HTML/homepage.html"><b>ELECTRONIX</b></a>
             <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
         </div>
         <div class="search-container">
@@ -311,7 +320,7 @@ footer {
             <div class="dropdown-content">
                 <a href="#">My Order</a>
                 <a href="/Electronix-Website/PHP/settings.php">My Account</a>
-                <a href="#">Contact Us</a>
+                <a href="FAQ.html">FAQ</a>
                 <a href="#">About Us</a>
                 <a href="#">Services</a>
             </div>
@@ -343,13 +352,13 @@ footer {
 
 
    <a href="/Electronix-Website/PHP/card.php">
-     <input type="button" class="button" value="Add your cards"></a><br>
+     <input type="button" class="btndone" value="Add your cards"></a><br>
 
-   <img src="/Website/Images/cards.jfif" alt="" srcset=""><br><br>
+   <img src="/Website/Images/cards.jfif" alt="" srcset="" width="317"><br><br>
    <a href="/Electronix-Website/PHP/card.php">
-     <input type="button" class="button" value="Add your cards"></a><br>
+     <input type="button" class="btndone" value="Add your cards"></a><br>
    <a href="">
-     <input type="button" class="button" value="Show my cards"></a>
+     <input type="button" class="btndone" value="Show my cards"></a>
   
 </body>
 </html>

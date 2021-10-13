@@ -333,24 +333,26 @@ footer {
             /* -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); */
         }
-        .cvv
+        #cvv
         {
-            padding: 10px;
-            float: right;
-            margin: -82px 412px;
+          border-color: darkblue;
+          width:60%
             
         }
-        .owner
+        #owner
         {
-            width: 73%;
+          border-color: darkblue;
+            width: 60%;
         }
-        .number
+        #cardnumber
         {
-            width: 100%;
+          border-color: darkblue;
+            width: 60%;
         }
         select
         {
-            width:10%;
+          border-color: darkblue;
+            width:30%;
             margin: 3px 0px 0px 0px;
         }
         img
@@ -360,29 +362,30 @@ footer {
             margin: -247px 93px -39px -24px;
             width: 30%;
         }
-        input 
-        {
-        /* font-size: 40px; */
-        border-radius: 20px;
-        border-color: darkblue;
-        width: 50%;
-        margin: 10px;
-        }
-        .button {
-        color: white;
-        background-color: darkblue;
-        /* font-size: 40px; */
-        border-radius: 20px;
-        /* margin:10px 0px 0px 0px; */
-        width: 51%;
-        cursor: pointer;
+       
+        .btndone {
+          border:2px solid black;
+    outline: 0;
+    color: white;
+    background-color: rgb(15, 3, 51);
+    text-align: center;
+    cursor: pointer;
+    width: 60.5%;
+    font-size: 18px;
+  margin-top:15px;
+       }
+       .btndone:hover
+       {
+        border:2px solid black;
+    background-color:lightblue;
+    color:black;
        }
     </style>
 </head>
 <body>
 <header class="main_header">
     <div class="logo">
-        <a href=""><b>ELECTRONIX</b></a>
+        <a href="/Electronix-Website/HTML/homepage.html"><b>ELECTRONIX</b></a>
         <img src="/Electronix-Website/Images/logo.jpg" alt="" height="45px" width="50px">
     </div>
     <div class="search-container">
@@ -398,7 +401,7 @@ footer {
         <div class="dropdown-content">
             <a href="#">My Order</a>
             <a href="/Electronix-Website/PHP/settings.php">My Account</a>
-            <a href="#">Contact Us</a>
+            <a href="FAQ.html">FAQ</a>
             <a href="#">About Us</a>
             <a href="#">Services</a>
         </div>
@@ -484,7 +487,7 @@ if($ShowError){
     </div>
     
     <div>
-        <input type="submit" name="button" id="button" class="button" value="DONE">
+        <input type="submit" name="btndone" id="btndone" class="btndone" value="DONE">
     </div>
 </form>
     </div>
