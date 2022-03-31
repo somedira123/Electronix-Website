@@ -136,7 +136,7 @@
                     <div class="row">
                         <div class="product__list clearfix mt--30">
 							<?php
-							$get_product=get_product($con,20);
+							$get_product=get_product($con,40);
 							foreach($get_product as $list){
 							?>
                             <!-- Start Single Category -->
