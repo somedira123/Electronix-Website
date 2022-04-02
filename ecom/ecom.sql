@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2020 at 12:11 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.0.25
+-- Generation Time: Apr 02, 2022 at 11:52 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -59,8 +58,9 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `categories`, `status`) VALUES
 (1, 'Mobile', 1),
-(2, 'Man', 1),
-(4, 'Woman', 1);
+(2, 'Tablet', 1),
+(3, 'Laptop', 1),
+(4, 'Tv', 1);
 
 -- --------------------------------------------------------
 
@@ -82,10 +82,7 @@ CREATE TABLE `contact_us` (
 --
 
 INSERT INTO `contact_us` (`id`, `name`, `email`, `mobile`, `comment`, `added_on`) VALUES
-(1, 'Vishal', 'vishal@gmail.com', '1234567890', 'Test Query', '2020-01-14 00:00:00'),
-(2, 'vishal@gmail.com', '', '1234567890', 'testing', '2020-01-19 07:59:38'),
-(3, 'Vishal', 'vishal@gmail.com', '1234567890', 'testing', '2020-01-19 08:00:09'),
-(4, 'test', 'test@gmail.com', '9990413778', 'test', '2020-05-01 09:21:37');
+(1, 'John', 'john@gmail.com', '9876543210', 'Testing', '2021-11-05 09:08:18');
 
 -- --------------------------------------------------------
 
@@ -172,15 +169,26 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `categories_id`, `name`, `mrp`, `price`, `qty`, `image`, `short_desc`, `description`, `meta_title`, `meta_desc`, `meta_keyword`, `status`) VALUES
-(1, 1, 'Realme C3 (Frozen Blue, 64 GB) (4 GB RAM)', 9999, 8499, 10, '799153645_303b4a46-a701-4b43-b9c1-d98a2b53422f.jpg', 'Mauris dapibus tellus quis risus maximus molestie. Curabitur eget tortor tellus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque quis nisi porta congue. Aenean sed maximus ligula. Vestibulum quis eros id ex condimentum lacinia. Nam interdum finibus odio, sit amet commodo erat varius sed. In at velit velit. Nullam vitae gravida mi. Donec aliquet nunc non ipsum bibendum, et elementum nibh lobortis. Fusce tempor elit at mauris luctus euismod. Donec eu massa eros. Aenean maximus vitae nisl ut sollicitudin. Aenean urna arcu, laoreet at ante eget, maximus mattis lacus. Mauris dapibus tellus quis risus maximus molestie. Curabitur eget tortor tellus.', 'Realme C3 (Frozen Blue, 64 GB) (4 GB RAM)', 'Realme C3 (Frozen Blue, 64 GB) (4 GB RAM)', 'Realme C3 (Frozen Blue, 64 GB) (4 GB RAM)', 1),
-(2, 1, 'APPLE IPHONE 11 PRO MAX (512GB) - MIDNIGHT GREEN', 165800, 155800, 4, '942626953_iphone.jpg', 'Aenean tempus ut leo nec laoreet. Vestibulum ut est neque.', 'Curabitur eget augue dolor. Curabitur id dapibus massa. Vestibulum at enim quis metus ultrices posuere vitae sit amet eros. Morbi et libero pellentesque, efficitur odio nec, congue lorem. Vestibulum faucibus, risus eget pretium efficitur, neque nulla eleifend purus, non venenatis lorem ligula vel nulla. Fusce finibus efficitur sapien vitae laoreet. Integer imperdiet justo sed tellus dictum, at egestas arcu finibus. Fusce et augue elit. Praesent tincidunt purus in purus dictum volutpat. Aenean tempus ut leo nec laoreet. Vestibulum ut est neque.', 'APPLE IPHONE 11 PRO MAX (512GB) - MIDNIGHT GREEN', '', 'APPLE IPHONE 11 PRO MAX (512GB) - MIDNIGHT GREEN', 1),
-(3, 1, 'Samsung Galaxy S10 Plus 1TB (Ceramic White, 12GB RAM)', 115900, 115900, 5, '567328558_samsung-galaxy-s10-plus-1tb-ceramic-white-12gb-ram-.jpg', 'Nullam purus lorem, tincidunt vitae tristique non, imperdiet ut urna.', 'Nullam a nunc et lorem ornare faucibus. Etiam tortor lacus, auctor eget enim at, tincidunt dignissim magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin tincidunt eros eget felis tempor, id volutpat ipsum lacinia. Donec scelerisque risus non purus scelerisque tristique. Mauris enim ligula, condimentum sed iaculis nec, porttitor eu nunc. Sed hendrerit vel arcu vitae iaculis. Phasellus vehicula molestie leo. Nullam purus lorem, tincidunt vitae tristique non, imperdiet ut urna.', 'Samsung Galaxy S10 Plus 1TB (Ceramic White, 12GB RAM)', 'Samsung Galaxy S10 Plus 1TB (Ceramic White, 12GB RAM)', 'Samsung Galaxy S10 Plus 1TB (Ceramic White, 12GB RAM)', 1),
-(4, 2, 'SHEEN-SOLID TROUSER-OLIVE', 1999, 1200, 3, '697347005_2__1538219531_49.204.69.38_600x.jpg', 'per inceptos himenaeos. Ut commodo ullamcorper quam non pulvinar.', 'Duis a felis congue, feugiat est non, suscipit quam. In elit lacus, auctor sed lacus eget, egestas consectetur leo. Duis pellentesque pharetra ante, ac ornare nibh faucibus id. Integer pulvinar malesuada nisl. Nulla vel orci nunc. Nullam a tellus eu ex ullamcorper mollis. Donec commodo ligula a accumsan fermentum. Mauris sed orci lacinia, posuere leo molestie, pretium mi. Cras sodales, neque id cursus fermentum, mi purus vehicula sem, vel laoreet lorem justo id tortor. Sed ut urna ut ipsum vestibulum commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut commodo ullamcorper quam non pulvinar.', 'SHEEN-SOLID TROUSER-OLIVE', 'SHEEN-SOLID TROUSER-OLIVE', 'SHEEN-SOLID TROUSER-OLIVE', 1),
-(5, 2, 'NATURE-LINEN SHIRT-GREEN', 2799, 2399, 8, '812581380_nature_green-0224_600x.jpg', 'a nisl pharetra orci, at condimentum nisl lorem elementum ipsum.', 'Nunc auctor turpis ante, eget bibendum mi mollis in. Aliquam quis neque ut libero malesuada auctor. Aliquam interdum enim at commodo gravida. Donec nisl sem, molestie ut quam quis, vulputate venenatis ipsum. Aenean quis ex ut magna accumsan fringilla. Quisque id ex massa. Sed libero ante, fringilla ac condimentum in, porttitor ac risus. Integer mattis odio nec nunc semper imperdiet. In porttitor tellus eget sapien vulputate, eu euismod lacus aliquet. Maecenas molestie elit augue, sit amet fringilla dolor congue et. Nunc eu libero auctor, sollicitudin lectus quis, porta ligula. In vel ullamcorper risus. Nullam viverra, mi sit amet laoreet luctus, urna nisl pharetra orci, at condimentum nisl lorem elementum ipsum.', 'NATURE-LINEN SHIRT-GREEN', 'NATURE-LINEN SHIRT-GREEN', 'NATURE-LINEN SHIRT-GREEN', 1),
-(6, 2, 'Monte Carlo Turquoise Blue Solid Collar T Shirt', 1999, 1500, 8, '931830512__8-(1)-E5x-104831-NJD.jpg', 'lacus quis urna tristique suscipit. Praesent vitae mi mollis dui facilisis convallis eu faucibus augue.', 'Duis in risus quis lectus dictum fringilla. Aenean tempor pellentesque velit id ullamcorper. Ut id aliquam odio. Morbi id pharetra libero, ut tempor nisi. Maecenas a lectus nec risus maximus rutrum. Mauris vel elit ut magna semper laoreet nec sed magna. Quisque eleifend vel sem non malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eget posuere orci, eu ultrices sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam sit amet ex dictum nisl bibendum elementum non in turpis. In bibendum ipsum nunc, bibendum lacinia lacus maximus eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus aliquam lacus quis urna tristique suscipit. Praesent vitae mi mollis dui facilisis convallis eu faucibus augue.', 'Monte Carlo Turquoise Blue Solid Collar T Shirt', 'Monte Carlo Turquoise Blue Solid Collar T Shirt', 'Monte Carlo Turquoise Blue Solid Collar T Shirt', 1),
-(7, 4, 'Floral Print Polo T-shirt', 1900, 1350, 7, '309027777_Floral-Print-Polo-T-shirt.jpg', 'isl pharetra orci, at condimentum nisl lorem elementum ipsum.', 'Nunc auctor turpis ante, eget bibendum mi mollis in. Aliquam quis neque ut libero malesuada auctor. Aliquam interdum enim at commodo gravida. Donec nisl sem, molestie ut quam quis, vulputate venenatis ipsum. Aenean quis ex ut magna accumsan fringilla. Quisque id ex massa. Sed libero ante, fringilla ac condimentum in, porttitor ac risus. Integer mattis odio nec nunc semper imperdiet. In porttitor tellus eget sapien vulputate, eu euismod lacus aliquet. Maecenas molestie elit augue, sit amet fringilla dolor congue et. Nunc eu libero auctor, sollicitudin lectus quis, porta ligula. In vel ullamcorper risus. Nullam viverra, mi sit amet laoreet luctus, urna nisl pharetra orci, at condimentum nisl lorem elementum ipsum.', 'Floral Print Polo T-shirt', 'Floral Print Polo T-shirt', 'Floral Print Polo T-shirt', 1),
-(8, 4, 'Floral Embroidered Polo T-shirt', 1120, 1900, 10, '651584201_Floral-Embroidered-Polo-T-shirt.jpg', 'rius, lacus velit aliquam ex, in dignissim sem eros ac erat. Vestibulum ac arcu tortor.', 'Vestibulum in auctor turpis. Quisque hendrerit eget turpis et molestie. Phasellus nec nibh a lacus rhoncus eleifend. Donec suscipit id diam non mattis. Fusce eu luctus leo. Etiam eget dui libero. Etiam eros lorem, rhoncus et convallis eget, tempus vel tellus. Nam at diam quis nisl tincidunt aliquam. Quisque placerat magna non libero interdum varius vel id risus. Vivamus mollis maximus fermentum. Donec eget nulla dui. Sed ultricies malesuada metus, non feugiat purus fringilla ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer accumsan, tortor id eleifend varius, lacus velit aliquam ex, in dignissim sem eros ac erat. Vestibulum ac arcu tortor.', 'Floral Embroidered Polo T-shirt', 'Floral Embroidered Polo T-shirt', 'Floral Embroidered Polo T-shirt', 1),
-(9, 4, 'Floral Print Polo T-shirt Latest', 650, 1560, 10, '526258680_Floral-Print-Polo-T-shirt1.jpg', 's mus. Vestibulum eget posuere orci, eu ultrices sapien. Orc', 'aximus rutrum. Mauris vel elit ut magna semper laoreet nec sed magna. Quisque eleifend vel sem non malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum eget posuere orci, eu ultrices sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam sit amet ex d', 'Floral Print Polo T-shirt Latest', '', 'Floral Print Polo T-shirt Latest', 1);
+(1, 4, 'LG LED Smart TV (55 inch)', 75000, 57990, 5, '973338751_LG-139cm.jpg', '139 cm / Ultra HD (4K) / 55%OFF', '', '', '', '', 1),
+(2, 4, 'LG LED Smart TV (43 inch)', 40990, 33990, 5, '960410002_LG-108cm.jpg', '108 cm / Full HD / 17%OFF', '', '', '', '', 1),
+(3, 4, 'LG LED Smart TV (32 inch)', 21990, 17999, 5, '303148021_LG-80.jpg', '80 cm / HD Ready / 18%OFF', '', '', '', '', 1),
+(4, 4, 'Mi 4A (40 inch)', 29999, 24999, 5, '513512761_Mi-4A.jpg', '100 cm / Full HD LED / 16%OFF', '', '', '', '', 1),
+(5, 4, 'SAMSUNG Crystal (43 inch)', 52900, 38990, 5, '579341039_SAMSUNG-Crystal-4K-108cm.jpg', '108 cm / Ultra HD (4K) / 26%OFF', '', '', '', '', 1),
+(6, 4, 'SAMSUNG Series 7 (75 inch)', 394900, 239999, 5, '748913576_SAMSUNG-Series7.jpg', '189 cm / Ultra HD (4K) / 39%OFF', '', '', '', '', 1),
+(7, 4, 'SONY BRAVIA (55 inch)', 94900, 69999, 5, '669927559_SONY-BRAVIA-X7400H.jpg', '138.8 cm / Ultra HD (4K) / 26%OFF', '', '', '', '', 1),
+(8, 4, 'SONY Series (49 inch)', 69900, 49999, 5, '618266821_SONY-W800G-Series.jpg', '123.2 cm / Full HD / 28%OFF', '', '', '', '', 1),
+(9, 2, 'Lenovo Tab M10', 13900, 10493, 5, '343717260_Lenovo-Tab-M10.jpg', '2 GB RAM / 32 GB ROM / Slate Black / 24%OFF', '', '', '', '', 1),
+(10, 2, 'Lenovo Tab P11 Pro', 60000, 44990, 5, '794584676_Lenovo-Tab-P11-Pro.jpg', '6 GB RAM / 128 GB ROM / Slate Grey / 25%OFF', '', '', '', '', 1),
+(11, 2, 'SAMSUNG Galaxy Tab A7', 21999, 18999, 5, '492872912_SAMSUNG-Galaxy-TabA7.jpg', '3 GB RAM / 64 GB ROM / Dark Grey / 13%OFF', '', '', '', '', 1),
+(12, 2, 'SAMSUNG Galaxy Tab S7', 76999, 71999, 5, '342801990_SAMSUNG-Galaxy-TabS7.jpg', '6 GB RAM / 128 GB ROM / Mystic Black / 6%OFF', '', '', '', '', 1),
+(13, 3, 'HP Pavilion', 77141, 66990, 5, '914704118_HP-Pavilion.jpg', 'Core i5 11th Gen\r\n(16 GB/512 GB SSD/Natural Silver) \r\n13%OFF', '', '', '', '', 1),
+(14, 3, 'HP 15s', 48756, 46990, 5, '852702399_HP-15s.jpg', 'Core i3 11th Gen\r\n(8 GB/512 GB SSD/Windows 10 Home/Jet Black)\r\n3%OFF', '', '', '', '', 1),
+(15, 3, 'HP 14s', 45892, 40000, 5, '225993337_HP-14s.jpg', 'Core i3 11th Gen\r\n(8 GB/256 GB SSD/Windows 10 Home/Natural Silver)\r\n12% OFF', '', '', '', '', 1),
+(16, 3, 'DELL Inspiron Ryzen', 49551, 39990, 5, '180164372_DELL-Inspiron-Ryzen.jpg', '3 Dual Core\r\n(8 GB/1 TB HDD/Windows 10/Softmint)\r\n19% OFF', '', '', '', '', 1),
+(17, 3, 'DELL G15', 78324, 69690, 5, '348740139_DELL-G15.jpg', 'Core i5 10th Gen\r\n(8 GB/512 GB SSD/Windows 10/4 GB Graphics/Dark Shadow Grey)\r\n11% OFF', '', '', '', '', 1),
+(18, 3, 'APPLE MacBook Pro M1', 122900, 112990, 5, '657014417_APPLE-MacBook-Pro-M1.jpg', 'Core i3 11th Gen\r\n(8 GB/256 GB SSD/Windows 10 Home/Natural Silver)\r\n8% OFF', '', '', '', '', 1),
+(19, 3, 'APPLE MacBook Air M1', 92900, 88990, 5, '800395565_APPLE-MacBook-Air-M1.jpg', '8-core CPU and 7-core GPU\r\n(8 GB/256 GB SSD/Mac OS Big Sur/Space Grey)\r\n4% OFF', '', '', '', '', 1),
+(20, 3, 'APPLE MacBook Pro', 199900, 179990, 5, '747252516_APPLE-MacBook-Pro.jpg', 'Core i7 9th Gen\r\n(16 GB/512 GB SSD/Mac OS Catalina/4 GB Graphics/Silver)\r\n9% OFF', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -202,8 +210,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `email`, `mobile`, `added_on`) VALUES
-(1, 'Vishal Gupta', 'vishal', 'phpvishal@gmail.com', '1234567890', '2020-05-13 00:00:00'),
-(2, 'Amit', 'amit', 'amir@gmail.com', '1234567890', '2020-05-14 00:00:00');
+(1, 'Shazia', 'shazia', 'shazia@gmail.com', '9988776655', '2021-11-05 09:11:01'),
+(2, 'Zoya', 'zoya', 'zoya@gmail.com', '9112233445', '2021-11-05 09:12:04'),
+(3, 'Mohd Sakib', 'mohdsakib', 'mohdsakib@gmail.com', '9999988888', '2021-11-05 09:13:22'),
+(4, 'Mudassir', 'mudassir', 'mudassir@gmail.com', '8888899999', '2021-11-05 09:14:17');
 
 -- --------------------------------------------------------
 
@@ -223,7 +233,7 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`id`, `user_id`, `product_id`, `added_on`) VALUES
-(16, 1, 4, '2020-05-13 08:54:24');
+(4, 1, 7, '2021-11-06 07:35:33');
 
 --
 -- Indexes for dumped tables
@@ -303,7 +313,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `order`
@@ -327,19 +337,19 @@ ALTER TABLE `order_status`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
