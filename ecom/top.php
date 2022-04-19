@@ -139,7 +139,7 @@ if(isset($_SESSION['USER_LOGIN'])){
                         <div class="menumenu__container clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
                                 <div class="logo">
-                                     <a href="index.php"><img src="images/logo.JPG" alt="logo images"></a>
+                                     <a href="index.php"><img src="images/logo.jpg" alt="logo images"></a>
                                 </div>
                             </div>
                             <div class="col-md-7 col-lg-6 col-sm-5 col-xs-3">
