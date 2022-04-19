@@ -17,7 +17,7 @@
     position: absolute;
     text-align: center;
     top: 50%;
-    width: 50px;
+    width: 50px;jpg
 }
 .product__action li a:hover{
         background-color:#3f5caf;
@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                 <div class="slide__thumb">
-                                    <img src="images/slider/fornt-img/APPLE-iPad-Air.JPG" alt="slider images">
+                                    <img src="images/slider/fornt-img/APPLE-iPad-Air.jpg" alt="slider images">
                                 </div>
                             </div>
                         </div>
