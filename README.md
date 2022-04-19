@@ -20,7 +20,7 @@ The same process is to be applied to user panel as well. For that come out of th
 ![image](https://user-images.githubusercontent.com/70096937/164041502-e3546d87-3832-4cd2-a6da-de07d346164f.png)
 
 
-# If you want to deploy this website using AWS Services follow the given steps:
+# If you want to deploy this website on localhost (XAMPP) follow the given steps:
 
 1. Give a proper database connection
 
