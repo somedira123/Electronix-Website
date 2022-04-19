@@ -7,7 +7,15 @@ If you want to deploy this website using AWS Services follow the given steps:
 
 1. Give a proper database connection
 
-![image](https://user-images.githubusercontent.com/70096937/164039922-94cd0b17-c783-4ae5-b836-8e15e99ce5fe.png)
+For databse connection go to admin folder->connection.inc.php
 
-In the above image you can see two $conn commands. However, you will be keeping only the above one. You have to add your database endpoint, username, password, and database name respectively in line 5
+![image](https://user-images.githubusercontent.com/70096937/164040584-a1b8b302-6807-4e52-a632-9aa92dc1471f.png)
+
+In the above image you can see two $conn commands. However, you will be keeping only the above one. You have to add your database endpoint, username, password, and database name respectively in line 5.
+
+Along with that you have to change the IP address present on line 13. Replace it with the Public IP address of your EC2 instance
+
+
+The same process is to be applied to user panel as well. For that come out of the admin folder and go to connection.inc.php
+![image](https://user-images.githubusercontent.com/70096937/164041502-e3546d87-3832-4cd2-a6da-de07d346164f.png)
 
