@@ -9,7 +9,6 @@ $res=mysqli_query($con,"select * from users where email='$email' and password='$
 $check_user=mysqli_num_rows($res);
 if($check_user>0){
 	foreach($res as $row){
-			if($row["status"] == '1'){
 	$_SESSION['USER_LOGIN']='yes';
 	$_SESSION['USER_ID']=$row['id'];
 	$_SESSION['USER_NAME']=$row['name'];
@@ -22,7 +21,7 @@ if($check_user>0){
 	
 	echo "valid";
 }
-}
+
 }
 else{
 	echo "wrong";
